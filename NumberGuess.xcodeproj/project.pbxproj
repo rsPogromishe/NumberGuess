@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		58DD33672893100600866F36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD33662893100600866F36 /* AppDelegate.swift */; };
 		58DD33692893100600866F36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD33682893100600866F36 /* SceneDelegate.swift */; };
-		58DD336B2893100600866F36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD336A2893100600866F36 /* ViewController.swift */; };
+		58DD336B2893100600866F36 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD336A2893100600866F36 /* StartViewController.swift */; };
 		58DD336E2893100600866F36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DD336C2893100600866F36 /* Main.storyboard */; };
 		58DD33702893100900866F36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DD336F2893100900866F36 /* Assets.xcassets */; };
 		58DD33732893100900866F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DD33712893100900866F36 /* LaunchScreen.storyboard */; };
+		58DD337B28932CA300866F36 /* EnterNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD337A28932CA300866F36 /* EnterNumberViewController.swift */; };
+		58DD337D2893307900866F36 /* ComputerGuessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD337C2893307900866F36 /* ComputerGuessingViewController.swift */; };
+		58DD337F2893308F00866F36 /* UserGuessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD337E2893308F00866F36 /* UserGuessingViewController.swift */; };
+		58DD33812893309900866F36 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD33802893309900866F36 /* ScoresViewController.swift */; };
+		58E8FDB82899096400D0C589 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8FDB72899096400D0C589 /* Extensions.swift */; };
+		58E8FDBB289948B600D0C589 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8FDBA289948B600D0C589 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		58DD33632893100600866F36 /* NumberGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DD33662893100600866F36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DD33682893100600866F36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58DD336A2893100600866F36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58DD336A2893100600866F36 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		58DD336D2893100600866F36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58DD336F2893100900866F36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58DD33722893100900866F36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58DD33742893100900866F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58DD337A28932CA300866F36 /* EnterNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNumberViewController.swift; sourceTree = "<group>"; };
+		58DD337C2893307900866F36 /* ComputerGuessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerGuessingViewController.swift; sourceTree = "<group>"; };
+		58DD337E2893308F00866F36 /* UserGuessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuessingViewController.swift; sourceTree = "<group>"; };
+		58DD33802893309900866F36 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
+		58E8FDB72899096400D0C589 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		58E8FDBA289948B600D0C589 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +70,51 @@
 			children = (
 				58DD33662893100600866F36 /* AppDelegate.swift */,
 				58DD33682893100600866F36 /* SceneDelegate.swift */,
-				58DD336A2893100600866F36 /* ViewController.swift */,
+				58E8FDBD289948C300D0C589 /* Utilities */,
+				58E8FDBC289948BA00D0C589 /* Model */,
+				58E8FDB9289948A100D0C589 /* Views */,
+				58E8FDBE289948D800D0C589 /* ViewModel */,
 				58DD336C2893100600866F36 /* Main.storyboard */,
 				58DD336F2893100900866F36 /* Assets.xcassets */,
 				58DD33712893100900866F36 /* LaunchScreen.storyboard */,
 				58DD33742893100900866F36 /* Info.plist */,
 			);
 			path = NumberGuess;
+			sourceTree = "<group>";
+		};
+		58E8FDB9289948A100D0C589 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58DD336A2893100600866F36 /* StartViewController.swift */,
+				58DD337A28932CA300866F36 /* EnterNumberViewController.swift */,
+				58DD337C2893307900866F36 /* ComputerGuessingViewController.swift */,
+				58DD337E2893308F00866F36 /* UserGuessingViewController.swift */,
+				58DD33802893309900866F36 /* ScoresViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		58E8FDBC289948BA00D0C589 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58E8FDBA289948B600D0C589 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58E8FDBD289948C300D0C589 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				58E8FDB72899096400D0C589 /* Extensions.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		58E8FDBE289948D800D0C589 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +188,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58DD336B2893100600866F36 /* ViewController.swift in Sources */,
+				58E8FDBB289948B600D0C589 /* Model.swift in Sources */,
+				58DD337B28932CA300866F36 /* EnterNumberViewController.swift in Sources */,
+				58DD336B2893100600866F36 /* StartViewController.swift in Sources */,
+				58DD33812893309900866F36 /* ScoresViewController.swift in Sources */,
+				58E8FDB82899096400D0C589 /* Extensions.swift in Sources */,
+				58DD337F2893308F00866F36 /* UserGuessingViewController.swift in Sources */,
 				58DD33672893100600866F36 /* AppDelegate.swift in Sources */,
+				58DD337D2893307900866F36 /* ComputerGuessingViewController.swift in Sources */,
 				58DD33692893100600866F36 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +348,6 @@
 				INFOPLIST_FILE = NumberGuess/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +375,6 @@
 				INFOPLIST_FILE = NumberGuess/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
