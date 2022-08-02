@@ -7,7 +7,9 @@
 
 import UIKit
 
-class UserGuessingViewController: UIViewController {
+class UserGuessViewController: UIViewController {
+    private let viewModel = UserGuessViewModel()
+
     private let tryNumber = UILabel()
     private let youGuessLabel = UILabel()
     private let numberField = UITextField()
@@ -17,6 +19,7 @@ class UserGuessingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.computerChooseNumber()
     }
 
     private func setupUI() {
@@ -50,10 +53,11 @@ class UserGuessingViewController: UIViewController {
         guessButton.setTitle("Guess", for: .normal)
         guessButton.tintColor = .white
         guessButton.backgroundColor = .blue
+        guessButton.addTarget(self, action: #selector(guessButtonPressed), for: .touchUpInside)
 
         answerLabel.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(answerLabel)
-        answerLabel.text = "No, my number is"
+        answerLabel.text = "No, my number is ..."
         answerLabel.font = .systemFont(ofSize: 18)
 
         NSLayoutConstraint.activate([
@@ -76,9 +80,22 @@ class UserGuessingViewController: UIViewController {
             answerLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
     }
+
+    private func updateUI() {
+        let guessText = viewModel.userGuessNumber(number: numberField.text ?? "", view: self)
+        answerLabel.text = "No, my number is \(guessText)"
+    }
+
+    @objc private func handleScreenTap(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+
+    @objc private func guessButtonPressed() {
+        updateUI()
+    }
 }
 
-extension UserGuessingViewController: UITextFieldDelegate {
+extension UserGuessViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.count == 0 {
             return true
@@ -86,9 +103,5 @@ extension UserGuessingViewController: UITextFieldDelegate {
         let currentText = textField.text ?? ""
         let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)
         return prospectiveText.containsOnlyCharactersIn(matchCharacters: "0123456789") && prospectiveText.count <= 2
-    }
-
-    @objc func handleScreenTap(sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
     }
 }

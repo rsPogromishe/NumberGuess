@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58029EC92899AD8C0073C6A8 /* ComputerGuessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58029EC82899AD8C0073C6A8 /* ComputerGuessViewModel.swift */; };
+		58029ECB2899CE5F0073C6A8 /* UserGuessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58029ECA2899CE5F0073C6A8 /* UserGuessViewModel.swift */; };
+		58029ECD2899D6690073C6A8 /* ScoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58029ECC2899D6690073C6A8 /* ScoresViewModel.swift */; };
 		58DD33672893100600866F36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD33662893100600866F36 /* AppDelegate.swift */; };
 		58DD33692893100600866F36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD33682893100600866F36 /* SceneDelegate.swift */; };
 		58DD336B2893100600866F36 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD336A2893100600866F36 /* StartViewController.swift */; };
@@ -14,14 +17,18 @@
 		58DD33702893100900866F36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DD336F2893100900866F36 /* Assets.xcassets */; };
 		58DD33732893100900866F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DD33712893100900866F36 /* LaunchScreen.storyboard */; };
 		58DD337B28932CA300866F36 /* EnterNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD337A28932CA300866F36 /* EnterNumberViewController.swift */; };
-		58DD337D2893307900866F36 /* ComputerGuessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD337C2893307900866F36 /* ComputerGuessingViewController.swift */; };
-		58DD337F2893308F00866F36 /* UserGuessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD337E2893308F00866F36 /* UserGuessingViewController.swift */; };
+		58DD337D2893307900866F36 /* ComputerGuessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD337C2893307900866F36 /* ComputerGuessViewController.swift */; };
+		58DD337F2893308F00866F36 /* UserGuessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD337E2893308F00866F36 /* UserGuessViewController.swift */; };
 		58DD33812893309900866F36 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD33802893309900866F36 /* ScoresViewController.swift */; };
 		58E8FDB82899096400D0C589 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8FDB72899096400D0C589 /* Extensions.swift */; };
-		58E8FDBB289948B600D0C589 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8FDBA289948B600D0C589 /* Model.swift */; };
+		58E8FDBB289948B600D0C589 /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8FDBA289948B600D0C589 /* Guess.swift */; };
+		58E8FDC0289955EB00D0C589 /* EnterNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8FDBF289955EB00D0C589 /* EnterNumberViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58029EC82899AD8C0073C6A8 /* ComputerGuessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerGuessViewModel.swift; sourceTree = "<group>"; };
+		58029ECA2899CE5F0073C6A8 /* UserGuessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuessViewModel.swift; sourceTree = "<group>"; };
+		58029ECC2899D6690073C6A8 /* ScoresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewModel.swift; sourceTree = "<group>"; };
 		58DD33632893100600866F36 /* NumberGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DD33662893100600866F36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DD33682893100600866F36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,11 +38,12 @@
 		58DD33722893100900866F36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58DD33742893100900866F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58DD337A28932CA300866F36 /* EnterNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNumberViewController.swift; sourceTree = "<group>"; };
-		58DD337C2893307900866F36 /* ComputerGuessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerGuessingViewController.swift; sourceTree = "<group>"; };
-		58DD337E2893308F00866F36 /* UserGuessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuessingViewController.swift; sourceTree = "<group>"; };
+		58DD337C2893307900866F36 /* ComputerGuessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerGuessViewController.swift; sourceTree = "<group>"; };
+		58DD337E2893308F00866F36 /* UserGuessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuessViewController.swift; sourceTree = "<group>"; };
 		58DD33802893309900866F36 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		58E8FDB72899096400D0C589 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		58E8FDBA289948B600D0C589 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		58E8FDBA289948B600D0C589 /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
+		58E8FDBF289955EB00D0C589 /* EnterNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNumberViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +95,8 @@
 			children = (
 				58DD336A2893100600866F36 /* StartViewController.swift */,
 				58DD337A28932CA300866F36 /* EnterNumberViewController.swift */,
-				58DD337C2893307900866F36 /* ComputerGuessingViewController.swift */,
-				58DD337E2893308F00866F36 /* UserGuessingViewController.swift */,
+				58DD337C2893307900866F36 /* ComputerGuessViewController.swift */,
+				58DD337E2893308F00866F36 /* UserGuessViewController.swift */,
 				58DD33802893309900866F36 /* ScoresViewController.swift */,
 			);
 			name = Views;
@@ -97,7 +105,7 @@
 		58E8FDBC289948BA00D0C589 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				58E8FDBA289948B600D0C589 /* Model.swift */,
+				58E8FDBA289948B600D0C589 /* Guess.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,6 +121,10 @@
 		58E8FDBE289948D800D0C589 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				58E8FDBF289955EB00D0C589 /* EnterNumberViewModel.swift */,
+				58029EC82899AD8C0073C6A8 /* ComputerGuessViewModel.swift */,
+				58029ECA2899CE5F0073C6A8 /* UserGuessViewModel.swift */,
+				58029ECC2899D6690073C6A8 /* ScoresViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,14 +200,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58E8FDBB289948B600D0C589 /* Model.swift in Sources */,
+				58E8FDC0289955EB00D0C589 /* EnterNumberViewModel.swift in Sources */,
+				58E8FDBB289948B600D0C589 /* Guess.swift in Sources */,
 				58DD337B28932CA300866F36 /* EnterNumberViewController.swift in Sources */,
+				58029EC92899AD8C0073C6A8 /* ComputerGuessViewModel.swift in Sources */,
+				58029ECD2899D6690073C6A8 /* ScoresViewModel.swift in Sources */,
 				58DD336B2893100600866F36 /* StartViewController.swift in Sources */,
 				58DD33812893309900866F36 /* ScoresViewController.swift in Sources */,
 				58E8FDB82899096400D0C589 /* Extensions.swift in Sources */,
-				58DD337F2893308F00866F36 /* UserGuessingViewController.swift in Sources */,
+				58DD337F2893308F00866F36 /* UserGuessViewController.swift in Sources */,
 				58DD33672893100600866F36 /* AppDelegate.swift in Sources */,
-				58DD337D2893307900866F36 /* ComputerGuessingViewController.swift in Sources */,
+				58029ECB2899CE5F0073C6A8 /* UserGuessViewModel.swift in Sources */,
+				58DD337D2893307900866F36 /* ComputerGuessViewController.swift in Sources */,
 				58DD33692893100600866F36 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

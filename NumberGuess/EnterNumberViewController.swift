@@ -11,6 +11,8 @@ class EnterNumberViewController: UIViewController {
     private let textField = UITextField()
     private let enterButton = UIButton()
 
+    private let viewModel = EnterNumberViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -37,11 +39,14 @@ class EnterNumberViewController: UIViewController {
         enterButton.setTitle("Enter The Number", for: .normal)
         enterButton.tintColor = .white
         enterButton.backgroundColor = .blue
+        enterButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        enterButton.alpha = 0.5
+        enterButton.isEnabled = false
 
         NSLayoutConstraint.activate([
             textField.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20),
             textField.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -20),
-            textField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
+            textField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 150),
 
             enterButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20),
             enterButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -20),
@@ -60,8 +65,15 @@ class EnterNumberViewController: UIViewController {
         }
     }
 
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        checkEmptyStroke()
+    @objc private func handleScreenTap(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+
+    @objc private func buttonTapped() {
+        viewModel.getUserNumber(number: textField.text ?? "")
+        let vc = ComputerGuessViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
 }
 
@@ -75,7 +87,7 @@ extension EnterNumberViewController: UITextFieldDelegate {
         return prospectiveText.containsOnlyCharactersIn(matchCharacters: "0123456789") && prospectiveText.count <= 2
     }
 
-    @objc func handleScreenTap(sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        checkEmptyStroke()
     }
 }

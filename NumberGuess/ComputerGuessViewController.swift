@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ComputerGuessingViewController: UIViewController {
+class ComputerGuessViewController: UIViewController {
+    private let viewModel = ComputerGuessViewModel()
+
     private let tryNumber = UILabel()
     private let computerGuessingLabel = UILabel()
     private let guessLabel = UILabel()
@@ -36,7 +38,7 @@ class ComputerGuessingViewController: UIViewController {
 
         guessLabel.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(guessLabel)
-        guessLabel.text = "Your number is - 80 ?"
+        guessLabel.text = "Your number is - \(String(describing: viewModel.computerRandomGuess())) ?"
         guessLabel.font = .systemFont(ofSize: 18)
 
         numberLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -53,6 +55,7 @@ class ComputerGuessingViewController: UIViewController {
         biggerButton.setTitle(">", for: .normal)
         biggerButton.setTitleColor(.black, for: .normal)
         biggerButton.contentHorizontalAlignment = .center
+        biggerButton.addTarget(self, action: #selector(biggerButtonTapped), for: .touchUpInside)
 
         guessButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(guessButton)
@@ -63,6 +66,7 @@ class ComputerGuessingViewController: UIViewController {
         guessButton.setTitle("=", for: .normal)
         guessButton.setTitleColor(.black, for: .normal)
         guessButton.contentHorizontalAlignment = .center
+        guessButton.addTarget(self, action: #selector(guessButtonTapped), for: .touchUpInside)
 
         lessButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lessButton)
@@ -73,6 +77,7 @@ class ComputerGuessingViewController: UIViewController {
         lessButton.setTitle("<", for: .normal)
         lessButton.setTitleColor(.black, for: .normal)
         lessButton.contentHorizontalAlignment = .center
+        lessButton.addTarget(self, action: #selector(lessButtonTapped), for: .touchUpInside)
 
         NSLayoutConstraint.activate([
             tryNumber.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 80),
@@ -103,5 +108,27 @@ class ComputerGuessingViewController: UIViewController {
             numberLabel.bottomAnchor.constraint(equalTo: biggerButton.topAnchor, constant: -20)
             
         ])
+    }
+
+    private func ifBiggerUpdateUI() {
+        guessLabel.text = "Your number is - \(String(describing: viewModel.biggerButtonGuess())) ?"
+    }
+
+    private func ifLessUpdateUI() {
+        guessLabel.text = "Your number is - \(String(describing: viewModel.lessButtonGuess())) ?"
+    }
+
+    @objc private func biggerButtonTapped() {
+        ifBiggerUpdateUI()
+    }
+
+    @objc private func lessButtonTapped() {
+        ifLessUpdateUI()
+    }
+
+    @objc private func guessButtonTapped() {
+        let vc = UserGuessViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
 }

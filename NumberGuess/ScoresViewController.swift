@@ -8,6 +8,8 @@
 import UIKit
 
 class ScoresViewController: UIViewController {
+    private let viewModel = ScoresViewModel()
+
     private let scoresLabel = UILabel()
     private let youTriesLabel = UILabel()
     private let computerTriesLabel = UILabel()
@@ -29,17 +31,17 @@ class ScoresViewController: UIViewController {
 
         youTriesLabel.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(youTriesLabel)
-        youTriesLabel.text = "Your's tries count: "
+        youTriesLabel.text = "Your's tries count: \(viewModel.getUserTries())"
         youTriesLabel.font = .systemFont(ofSize: 18)
 
         computerTriesLabel.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(computerTriesLabel)
-        computerTriesLabel.text = "Computer's tries count: "
+        computerTriesLabel.text = "Computer's tries count: \(viewModel.getComputerTries())"
         computerTriesLabel.font = .systemFont(ofSize: 18)
 
         whoWinLabel.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(whoWinLabel)
-        whoWinLabel.text = "You win"
+        whoWinLabel.text = "\(viewModel.whoWin())"
         whoWinLabel.font = .systemFont(ofSize: 22)
 
         menuButton.translatesAutoresizingMaskIntoConstraints = false
@@ -49,6 +51,7 @@ class ScoresViewController: UIViewController {
         menuButton.setTitle("Main menu", for: .normal)
         menuButton.tintColor = .white
         menuButton.backgroundColor = .blue
+        menuButton.addTarget(self, action: #selector(pushToMainMenu), for: .touchUpInside)
 
         NSLayoutConstraint.activate([
             scoresLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
@@ -68,5 +71,11 @@ class ScoresViewController: UIViewController {
             menuButton.heightAnchor.constraint(equalToConstant: 50),
             menuButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -40)
         ])
+    }
+
+    @objc private func pushToMainMenu() {
+        let vc = StartViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
 }
